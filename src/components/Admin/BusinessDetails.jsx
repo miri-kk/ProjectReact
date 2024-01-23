@@ -1,5 +1,5 @@
 import React from "react"
-import AdminEdit from "./AdminEdit"
+import AdminEdit from "../../store/AdminEdit"
 import { observer } from "mobx-react"
 import Button from '@mui/material/Button';
 import { EditDetails } from "./EditDetails";
@@ -26,4 +26,4 @@ const BusinessDetails = (observer(() => {
       </>
   )
 }))
-export default BusinessDetails
+export default BusinessDetails;

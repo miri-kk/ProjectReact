@@ -1,6 +1,6 @@
 import axios from 'axios';
 import  DataStore from './store.js';
-import AdminEdit from '../components/Admin/AdminEdit.jsx';
+import AdminEdit from './AdminEdit.js';
 
 
 export async function getServices() {
@@ -37,9 +37,9 @@ export async function getBusinessData() {
   
   export async function addBusinessData(businessData) {
     try {
-      const res = await axios.get('http://localhost:8787/services', { ...service });
+      const res = await axios.get('http://localhost:8787/businessData');
       if (res.status === 200) {
-        AdminEdit.addBusinessData(businessData);
+        AdminEdit.addBusinessData();
         return "success";
       } else {
         return "failed";

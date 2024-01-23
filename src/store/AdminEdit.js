@@ -1,10 +1,10 @@
 import {makeObservable, observable, action} from "mobx";
 
 class AdminEdit{
-    name;
-    address;
-    phone;
-    email;
+    name="";
+    address="";
+    phone="";
+    email="";
     isEdit=false;
     
 constructor(){
