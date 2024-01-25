@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { observer } from "mobx-react";
 import AdminEdit from "../../store/AdminEdit.js";
 import SaveChanges from "./SaveChanges‏.jsx";
+//import FormEditBusinessData from "./FormEditBusinessData.jsx";
+import BusinessDetails from "./BusinessDetails.jsx";
 
 
 const EditBusinessDetails =(observer(()=>{
@@ -15,11 +17,14 @@ useEffect(() => {
     AdminEdit.setDetailsValues(Bname, Baddress, Bphone, Bemail);
   }, [Bname, Baddress, Bphone, Bemail]);
 
+
 return (
 <>
 <h2>עריכת פרטים</h2>
+<ButtonComponent handleClick={FirstComponent.handleClick} />
+<BusinessDetails/>
 
-<TextField
+{/* <TextField
 id="outlined-basic"
 label="שם העסק"
 type="text"
@@ -68,7 +73,7 @@ onChange={(e) => setBname(e.target.value)}
     color="secondary"
     onClick={()=> SaveChanges(Bname, Baddress, Bphone, Bemail, "aaa")}>
     עדכן
-</Button>
+</Button> */}
 </>
 )}
 )
