@@ -10,9 +10,9 @@ import { EditDetails } from "./EditDetails";
 const BusinessDetails = (observer(() => {
     const [isActive, setIsActive] = useState(false);
 
-    const handleClick = () => {
-    setIsActive(true);
-  };
+  //   const handleClick = () => {
+  //   setIsActive(true);
+  // };
         
 
   return (

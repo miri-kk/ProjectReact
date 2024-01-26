@@ -1,9 +1,9 @@
-const buttomOpen =({handleClickOpen})=>{
-    return(
-    <Button variant="outlined" onClick={handleClickOpen}>
+// const buttomOpen =({handleClickOpen})=>{
+//     return(
+//     <Button variant="outlined" onClick={handleClickOpen}>
 
-  Open form dialog
-  </Button>
-        )
-  }
-  export default buttomOpen
+//   Open form dialog
+//   </Button>
+//         )
+//   }
+//   export default buttomOpen

@@ -18,19 +18,13 @@ constructor(){
             editDetails: action
         });
 }
-        setDetailsValues(name, address, phone, email) {
-            this.name = name;
-            this.address = address;
-            this.phone = phone;
-            this.email = email;
-        }
+       
 
-        updateDetails=(name, address, phone, email ,detail)=>{
+        updateDetails=(name, address, phone, email)=>{
             this.name=name;
             this.address=address;
             this.phone=phone;
             this.email=email;
-            this.detail=detail;
         }
 
         editDetails(status){

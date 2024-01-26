@@ -13,18 +13,18 @@ const EditBusinessDetails =(observer(()=>{
     const [Bphone, setBphone] = useState(AdminEdit.phone);
     const [Bemail, setBemail] = useState(AdminEdit.email);
 
-useEffect(() => {
-    AdminEdit.setDetailsValues(Bname, Baddress, Bphone, Bemail);
-  }, [Bname, Baddress, Bphone, Bemail]);
+// useEffect(() => {
+//     AdminEdit.setDetailsValues(Bname, Baddress, Bphone, Bemail);
+//   }, [Bname, Baddress, Bphone, Bemail]);
 
 
 return (
 <>
 <h2>עריכת פרטים</h2>
-<ButtonComponent handleClick={FirstComponent.handleClick} />
-<BusinessDetails/>
+{/* <ButtonComponent handleClick={FirstComponent.handleClick} />
+<BusinessDetails/> */}
 
-{/* <TextField
+<TextField
 id="outlined-basic"
 label="שם העסק"
 type="text"
@@ -73,7 +73,7 @@ onChange={(e) => setBname(e.target.value)}
     color="secondary"
     onClick={()=> SaveChanges(Bname, Baddress, Bphone, Bemail, "aaa")}>
     עדכן
-</Button> */}
+</Button>
 </>
 )}
 )
