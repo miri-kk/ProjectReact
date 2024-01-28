@@ -8,10 +8,10 @@ import BusinessDetails from "./BusinessDetails.jsx";
 
 
 const EditBusinessDetails =(observer(()=>{
-    const [Bname, setBname] = useState(AdminEdit.name);
-    const [Baddress, setBaddress] = useState(AdminEdit.address);
-    const [Bphone, setBphone] = useState(AdminEdit.phone);
-    const [Bemail, setBemail] = useState(AdminEdit.email??'');
+    const [Bname, setBname] = useState(AdminEdit.name??"קליקה מודיעין עילית");
+    const [Baddress, setBaddress] = useState(AdminEdit.address??"אבני נזר 36");
+    const [Bphone, setBphone] = useState(AdminEdit.phone??"08-6668342");
+    const [Bemail, setBemail] = useState(AdminEdit.email??'klika@modil.org.il');
 
 
 return (
