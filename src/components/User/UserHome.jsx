@@ -11,13 +11,15 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import { useNavigate } from 'react-router-dom';
 
 function UserHome() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const navigate = useNavigate()
 
   const handleChange = (event) => {
-    setAuth(event.target.checked);
+  navigate('/adminLogin')
   };
 
   const handleMenu = (event) => {
@@ -39,7 +41,7 @@ function UserHome() {
               aria-label="login switch"
             />
           }
-          label={auth ? 'Logout' : 'Login'}
+          label={auth ? 'admin' : 'user'}
         />
       </FormGroup>
       <AppBar position="static">
@@ -55,6 +57,10 @@ function UserHome() {
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Photos
+          </Typography>
+
+          <Typography variant="h11" component="div" sx={{ flexGrow: 1 }}>
+            פרטי העסק
           </Typography>
           {auth && (
             <div>

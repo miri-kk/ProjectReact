@@ -8,8 +8,8 @@ function App() {
   getBusinessData();
   return (
     <>
-      <AdminPage/>
-      {/* <UserHome/> */}
+      {/* <AdminPage/> */}
+      <UserHome/>
     </>  
   )
 }
