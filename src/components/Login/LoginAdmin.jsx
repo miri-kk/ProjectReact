@@ -2,7 +2,7 @@ import  React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from "react"
-import CheckLogin from '../../../Data/checkLogin';
+import CheckLogin from '../../Data/checkLogin';
 
 function LoginAdmin() {
     const [username, setUsername] = useState('');

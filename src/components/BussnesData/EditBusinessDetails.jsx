@@ -11,11 +11,7 @@ const EditBusinessDetails =(observer(()=>{
     const [Bname, setBname] = useState(AdminEdit.name);
     const [Baddress, setBaddress] = useState(AdminEdit.address);
     const [Bphone, setBphone] = useState(AdminEdit.phone);
-    const [Bemail, setBemail] = useState(AdminEdit.email);
-
-// useEffect(() => {
-//     AdminEdit.setDetailsValues(Bname, Baddress, Bphone, Bemail);
-//   }, [Bname, Baddress, Bphone, Bemail]);
+    const [Bemail, setBemail] = useState(AdminEdit.email??'');
 
 
 return (
@@ -71,7 +67,7 @@ onChange={(e) => setBname(e.target.value)}
 <Button
     variant="contained"
     color="secondary"
-    onClick={()=> SaveChanges(Bname, Baddress, Bphone, Bemail, "aaa")}>
+    onClick={()=> SaveChanges(Bname, Baddress, Bphone, Bemail)}>
     עדכן
 </Button>
 </>

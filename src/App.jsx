@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css'
-import AdminPage from './components/Admin/Login/AdminPage.jsx';
-
+import { setBusinessData, getBusinessData } from './store/server.js';
+import AdminPage from './components/Login/AdminPage.jsx'
 function App() {
 
+  getBusinessData();
   return (
     <>
-
-      <AdminPage />
-      
-    </>
+      <AdminPage/>
+    </>  
   )
 }
 

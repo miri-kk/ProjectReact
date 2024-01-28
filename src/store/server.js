@@ -23,20 +23,19 @@ export async function getBusinessData() {
     try
     {
       const businessData = await axios.get('http://localhost:8787/businessData');
-      const name = businessData.data.name
-      AdminEdit.updateDetails(name, "", "", "");
+      const{name, address, phone, email} = businessData.data;
+      AdminEdit.updateDetails(name, address,phone, email);
     }
     catch (error)
     {
     }
   }
   
-  export async function addBusinessData(name, address, phone, email ) {
+  export async function setBusinessData(name, address, phone, email ) {
     try {
-      const res = await axios.post('http://localhost:8787/businessData',{"name":name,"address":address, "phone":phone, "details":email } );
+      const res = await axios.post('http://localhost:8787/businessData',{"name":name,"address":address, "phone":phone, "email":email } );
         return "success";
       
     } catch (error) {
     }
-  }
-  
+  }  

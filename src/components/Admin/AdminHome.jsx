@@ -1,12 +1,13 @@
 import React from "react"
 import { observer } from "mobx-react"
-import IsEditDetails from "./IsEditDetails"
+import IsEditDetails from "../BussnesData/IsEditDetails"
 
 const AdminHome = (observer(() => {
 
   return (
     <>
-      <IsEditDetails/>     
+      <IsEditDetails/>  
+      <h2>hello</h2>   
     </>
   )
 }))
