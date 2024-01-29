@@ -1,39 +1,26 @@
 import AdminEdit from "../../store/AdminEdit"
 import React, { useState } from 'react';
 import { observer } from "mobx-react"
-import { Button } from "@mui/material";
-import { EditDetails } from "./EditDetails";
-// import {handleClickOpen} from "./FormEditBusinessData";
-// import FormEditBusinessData from "./FormEditBusinessData";
+import dataStore from "../../Data/dataStore";
+
+import ButtonEdit from "./ButtonEdit";
 
 
 const BusinessDetails = (observer(() => {
     const [isActive, setIsActive] = useState(false);
 
-  //   const handleClick = () => {
-  //   setIsActive(true);
-  // };
-        
-
   return (
       <>
-   <h2>פרטי העסק</h2>
-        <h2></h2>{AdminEdit.name}
-        <h3></h3>{AdminEdit.address}
-        <h3></h3>{AdminEdit.phone}
-        <h3></h3>{AdminEdit.email}
-
-        <br/>
-        <br/>
+        <h4>{AdminEdit.name}</h4>
+        <p>{AdminEdit.address}</p>
+        <p>{AdminEdit.phone}</p>
+        <p>{AdminEdit.email}</p>
 
         {isActive ? <p>Activated!</p> : null}
 
-        <Button
-        variant="contained"
-        color="secondary"
-        onClick={()=>EditDetails(true)}>
-        עריכה
-        </Button>
+      
+        <div style={{ marginBottom: '15px' }}></div>
+        {!dataStore.isLogin ? "" : <ButtonEdit />}
       </>
   )
 }));
