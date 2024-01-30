@@ -8,7 +8,7 @@ const IsEditDetails = (observer(() => {
 
     return (
         <>
-           {!AdminEdit.isEdit ? < BusinessDetails/> : < EditBusinessDetails/>}
+           {/* {!AdminEdit.isEdit ? < BusinessDetails/> : < EditBusinessDetails/>} */}
         </>
     )
 }))

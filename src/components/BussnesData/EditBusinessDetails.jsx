@@ -72,15 +72,12 @@
 
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import NewForm from './newForm';
 
-export default function EditBusinessDetails() {
-  const [open, setOpen] = React.useState(true);
+export default function EditBusinessDetails({setOpen}) {
 
     const handleClose = () => {
     setOpen(false);
@@ -89,24 +86,15 @@ export default function EditBusinessDetails() {
   return (
     <React.Fragment>
       <Dialog
-        open={open}
+        open={true}
         onClose={handleClose}
-        PaperProps={{
-          component: 'form',
-          onSubmit: (event) => {
-            event.preventDefault();
-            const formData = new FormData(event.currentTarget);
-            const formJson = Object.fromEntries(formData.entries());
-            const email = formJson.email;
-            console.log(email);
-            handleClose();
-          },
-        }}
       >
-        <DialogTitle>Subscribe</DialogTitle>
-        {/*  */}
+        <DialogTitle>
+            <NewForm/>
+        </DialogTitle>
+
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleClose}>סגור</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>

@@ -9,10 +9,11 @@ function OpenDialogButton() {
     setOpen(true);
   };
 
+  
   return (
     <div>
       <Button variant="outlined" onClick={handleClickOpen}>
-        Open Edit Dialog
+        לעריכה
       </Button>
       {open && <EditBusinessDetails setOpen={setOpen}/>}
     </div>
