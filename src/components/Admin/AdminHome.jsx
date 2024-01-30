@@ -7,7 +7,7 @@ const AdminHome = (observer(() => {
   return (
     <>
       <IsEditDetails/>  
-      <h2>hello</h2>   
+      <h2>AdminHome</h2>   
     </>
   )
 }))
