@@ -1,7 +1,7 @@
 import AdminEdit from "../../store/AdminEdit"
 import React, { useState } from 'react';
 import { observer } from "mobx-react"
-import dataStore from "../../Data/dataStore";
+import dataStore from "../Login/dataStore";
 
 import ButtonEdit from "./ButtonEdit";
 

@@ -3,12 +3,12 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
-import NewForm from './newForm';
+// import NewForm from './newForm';
 
-export default function EditBusinessDetails({setOpen}) {
+export default function FormAddService({setIsClicked}) {
 
     const handleClose = () => {
-    setOpen(false);
+      setIsClicked(false);
   };
 
   return (
@@ -18,7 +18,8 @@ export default function EditBusinessDetails({setOpen}) {
         onClose={handleClose}
       >
         <DialogTitle>
-            <NewForm/>
+            {/* <NewForm/> */}
+            טופס
         </DialogTitle>
 
         <DialogActions>

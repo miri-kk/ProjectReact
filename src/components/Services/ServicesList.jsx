@@ -1,16 +1,16 @@
-import './App.css'
-import  DataStore from '../../store/store.js';
+// import './App.css'
+// import  DataStore from '../../store/store.js';
 
 
-const ServiceList=(observer(()=> {
+// const ServiceList=(observer(()=> {
 
-  return (
-    <>
-      {DataStore.services.map((services, index)=>{
-        <div key={index}>{services.name}</div>
-      })}
-    </>
-  )
-}))
+//   return (
+//     <>
+//       {DataStore.services.map((services, index)=>{
+//         <div key={index}>{services.name}</div>
+//       })}
+//     </>
+//   )
+// }))
 
-export default ServiceList
+// export default ServiceList

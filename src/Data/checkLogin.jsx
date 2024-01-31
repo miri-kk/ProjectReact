@@ -1,5 +1,5 @@
 import axios from "axios";
-import dataStore from "./dataStore.jsx";
+import dataStore from "../components/Login/dataStore.jsx";
 
 export async function CheckLogin(name, password) {
     try {

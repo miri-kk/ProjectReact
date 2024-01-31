@@ -12,8 +12,8 @@ function OpenDialogButton() {
   
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        לעריכה
+      <Button variant="inherit" onClick={handleClickOpen}>
+        עריכה
       </Button>
       {open && <EditBusinessDetails setOpen={setOpen}/>}
     </div>

@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css'
-import { setBusinessData, getBusinessData } from './store/server.js';
+import { getBusinessData } from './store/server.js';
 import AdminPage from './components/Login/AdminPage.jsx'
-import UserHome from "./components/User/UserHome.jsx"
+// import ButtonAddService from './components/Services/ButtonAddService.jsx';
+import ResponsiveAppBar from './components/BussnesData/ResponsiveAppBar.jsx';
+import ButtonAddService from './components/Services/ButtonAddService.jsx';
 function App() {
 
   getBusinessData();
   return (
     <>
     <div>
-      <UserHome/>
-      <AdminPage/>
+      <ResponsiveAppBar/>
+      {/* <AdminPage/> */}
+      <ButtonAddService/>
+
       </div>
     </>  
   )
